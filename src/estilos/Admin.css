@@ -1,0 +1,600 @@
+/* Admin Container */
+.admin-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Admin Header */
+.admin-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.admin-logo {
+    font-size: 50px;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.admin-title h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.admin-title p {
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Admin Tabs */
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+}
+
+.tab-icon {
+    font-size: 18px;
+}
+
+/* Reportes Grid */
+.reportes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.reporte-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.reporte-card:hover {
+    transform: translateY(-5px);
+}
+
+.reporte-card h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reporte-caja {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caja-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b6b;
+}
+
+.caja-item.highlight {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border-left: none;
+}
+
+.caja-item span {
+    font-size: 14px;
+}
+
+.caja-item strong {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+    color: #666;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+/* Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.admin { 
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
+    color: white; 
+}
+
+.badge.cajero { 
+    background: linear-gradient(135deg, #2196f3, #1976d2); 
+    color: white; 
+}
+
+.badge.cocina { 
+    background: linear-gradient(135deg, #ff9800, #f57c00); 
+    color: white; 
+}
+
+.badge.pollo { 
+    background: linear-gradient(135deg, #ffcc80, #ffa726); 
+    color: #e65100; 
+}
+
+.badge.hamburguesa { 
+    background: linear-gradient(135deg, #a5d6a7, #66bb6a); 
+    color: #1b5e20; 
+}
+
+.badge.soda { 
+    background: linear-gradient(135deg, #90caf9, #42a5f5); 
+    color: #0d47a1; 
+}
+
+/* Badge Estado */
+.badge-estado {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-pendiente {
+    background: linear-gradient(135deg, #fff3cd, #ffc107);
+    color: #856404;
+}
+
+.badge-listo {
+    background: linear-gradient(135deg, #d4edda, #28a745);
+    color: #155724;
+}
+
+.badge-entregado {
+    background: linear-gradient(135deg, #d1ecf1, #17a2b8);
+    color: #0c5460;
+}
+
+/* Usuarios Panel */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.panel-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.filtro-fechas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filtro-fechas input[type="date"] {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.filtro-fechas input[type="date"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.filtro-fechas span, .filtro-fechas label {
+    color: #666;
+    font-size: 14px;
+}
+
+.btn-filtrar {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-filtrar:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255,107,107,0.3);
+}
+
+.usuarios-panel, .ordenes-panel, .facturas-panel, .reportes-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.usuarios-panel h3, .ordenes-panel h3, .facturas-panel h3, .reportes-panel h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuarios-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.usuarios-header h3 {
+    margin: 0;
+}
+
+.btn-nuevo {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-nuevo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+/* Buttons */
+.btn-accion {
+    padding: 8px 15px;
+    margin-right: 5px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-accion:hover {
+    transform: translateY(-2px);
+}
+
+.btn-accion.eliminar {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    margin: 0 0 25px 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-botones button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-botones button:first-child {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+}
+
+.modal-botones button:last-child {
+    background: #eee;
+    color: #666;
+}
+
+.modal-botones button:hover {
+    transform: translateY(-2px);
+}
+
+/* Empty State */
+.sin-ordenes, .sin-facturas {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Productos Lista */
+.productos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.productos-lista span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Modal Factura */
+.modal-factura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.factura {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.factura h2 {
+    color: #ff6b6b;
+    margin: 0 0 10px 0;
+}
+
+.factura-fecha, .factura-pedido, .factura-cajero {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.factura-items {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.factura-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.factura-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 2px solid #333;
+}
+
+.factura-botones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn-imprimir-factura {
+    padding: 12px 30px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-imprimir-factura:hover {
+    background: #45a049;
+}
+
+.factura .btn-cerrar {
+    padding: 12px 30px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.factura .btn-cerrar:hover {
+    background: #ff5252;
+}
+
+@media print {
+    .admin-header,
+    .admin-tabs,
+    .facturas-panel,
+    .factura-botones {
+        display: none !important;
+    }
+    
+    .modal-factura {
+        position: static;
+        background: none;
+    }
+    
+    .factura {
+        box-shadow: none;
+        width: 100%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .admin-tabs {
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .reportes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 20px;
+    }
+    
+    .panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filtro-fechas {
+        flex-wrap: wrap;
+    }
+}

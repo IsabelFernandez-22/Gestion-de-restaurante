@@ -1,0 +1,38 @@
+{
+  "name": "dona-choca",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de pedidos para restaurante Doña Choca",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "server": "node api/index.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

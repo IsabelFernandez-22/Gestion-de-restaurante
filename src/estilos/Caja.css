@@ -1,0 +1,474 @@
+.caja-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 100px);
+}
+
+.caja-izquierda {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-derecha {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-izquierda h2,
+.caja-derecha h2 {
+    margin: 0;
+    color: #333;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-botones {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-facturas {
+    padding: 8px 12px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-facturas:hover {
+    background: #1976d2;
+}
+
+.btn-facturas.cierre {
+    background: #ff9800;
+}
+
+.btn-facturas.cierre:hover {
+    background: #f57c00;
+}
+
+.filtros {
+    margin-bottom: 15px;
+}
+
+.buscador {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.categorias {
+    display: flex;
+    gap: 10px;
+}
+
+.categorias button {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.categorias button.active {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+}
+
+.lista-productos {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    align-content: start;
+}
+
+.producto-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.producto-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto-nombre {
+    font-weight: 500;
+    color: #333;
+}
+
+.producto-precio {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.carrito-items {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.carrito-vacio {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+}
+
+.carrito-item {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito-nombre {
+    font-size: 14px;
+    color: #333;
+}
+
+.carrito-precio {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+.carrito-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carrito-cantidad button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.carrito-cantidad button:hover {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+}
+
+.carrito-cantidad span {
+    min-width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+    font-weight: bold;
+}
+
+.btn-eliminar:hover {
+    background: #c82333 !important;
+    border-color: #bd2130 !important;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-amount {
+    color: #ff6b6b;
+    font-size: 22px;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-confirmar:hover:not(:disabled) {
+    background: #ff5252;
+}
+
+.btn-confirmar:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.caja-pedidos {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.caja-pedidos h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.lista-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pedido-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 4px solid #ff9800;
+    transition: all 0.3s;
+}
+
+.pedido-item.badge-proceso {
+    border-left-color: #ff9800;
+    background: #fff3e0;
+}
+
+.pedido-item.badge-listo {
+    border-left-color: #4caf50;
+    background: #e8f5e9;
+}
+
+.pedido-item.badge-entregado {
+    border-left-color: #2196f3;
+    background: #e3f2fd;
+}
+
+.pedido-item.badge-ninguno {
+    border-left-color: #9e9e9e;
+    background: #f5f5f5;
+}
+
+.pedido-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.pedido-id {
+    font-weight: bold;
+    color: #333;
+}
+
+.pedido-fecha {
+    font-size: 12px;
+    color: #666;
+}
+
+.pedido-items-resumen {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pedido-estado {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.badge-proceso {
+    background: #ff9800;
+    color: white;
+}
+
+.badge-listo {
+    background: #4caf50;
+    color: white;
+}
+
+.badge-entregado {
+    background: #2196f3;
+    color: white;
+}
+
+.badge-ninguno {
+    background: #9e9e9e;
+    color: white;
+}
+
+.modal-factura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.factura {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.factura h2 {
+    color: #ff6b6b;
+    margin: 0 0 10px 0;
+}
+
+.factura-fecha, .factura-pedido, .factura-cajero {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.factura-items {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.factura-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.factura-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 2px solid #333;
+}
+
+.btn-cerrar {
+    margin-top: 15px;
+    padding: 12px 40px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cerrar:hover {
+    background: #ff5252;
+}
+
+.notificaciones {
+    margin-bottom: 15px;
+}
+
+.notificacion {
+    background: #ff9800;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+.notificacion span {
+    font-size: 14px;
+}
+
+.btn-notificacion {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.btn-entregar {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-entregar:hover {
+    background: #45a049;
+}
